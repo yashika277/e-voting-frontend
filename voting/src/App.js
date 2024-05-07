@@ -5,7 +5,7 @@ import Vote from "./components/User/Pages/Vote";
 import { Route, Routes } from "react-router-dom";
 import UserLogin from "./components/UserLogin";
 import {userNav} from './components/User/Header/userNav'
-// import Cookies from 'js-cookies';
+import Cookies from 'js-cookies';
 import AdminLogin from "./components/AdminLogin";
 import Navbar from "./components/Atoms/Header/Navbar";
 import AHome from "./components/Admin/Pages/Home"
@@ -16,9 +16,9 @@ import Connection from "./components/Admin/Pages/Connection";
 import User from "./components/Admin/Pages/User";
 
 function App() {
-  
+  const role = Cookies.getItem("Role")
   // const role = "admin"
-const role =""
+// const role =""
    if (!role || role === "") {
      console.log("hello");
      return (
